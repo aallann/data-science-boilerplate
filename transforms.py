@@ -1,9 +1,6 @@
 # -*- codign: utf-8 -*-
 
 
-''' normalizers, scalers, categorical encoders '''
-
-
 import pandas as pd
 import numpy as np
 
@@ -128,7 +125,6 @@ class LogarithmicScaler(Transform):
         super().__init__()
         self.dims = dims
 
-
     def transform(self, data_frame: pd.DataFrame) -> pd.DataFrame:
         ''' Forward transform '''
         if not self.dims:
@@ -186,3 +182,4 @@ class ExponentialScaler(Transform):
 
 class CategoricalEncoder(Transform):
     pass
+
